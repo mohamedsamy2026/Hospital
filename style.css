@@ -1,0 +1,30 @@
+/* libarary Font Size */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+/* Normaly */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* the varubal */
+:root{
+  --light-blue: #1a7bd1;
+  --dark-gray: #2c2d3f;
+  --light-gray: #757575;
+  --bg-white: #f6f6f6;
+  --bg-newsletter: #edf2ff;
+}
+
+
+body{
+     font-family: "Open Sans", sans-serif;
+     /*     font-family: "Oswald", serif */
+}
+
+
+
+
