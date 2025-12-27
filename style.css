@@ -48,6 +48,8 @@ a{
 
 p{
   font-size: 14;
+    font-weight: 700;
+
 }
 
 .container{
@@ -124,8 +126,8 @@ p{
 #header .navbar nav ul li a{
   margin: 0 15px;
   color: var(--dark-gray);
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 19px;
   transition: all 0.3s ease;
   
 
@@ -160,6 +162,8 @@ p{
   align-items: center;
   gap: 10rem;
   margin: 0 2.5rem;
+  direction: rtl;
+
 }
 
 
@@ -169,6 +173,7 @@ p{
   border-radius: 10px;
   min-height: 600px;
 }
+
 
 #home .content-all .home-text small {
    font-size: 22px;
@@ -201,6 +206,7 @@ p{
   font-weight: 600;
   margin-top: 20px;
   transition: all 0.3s ease ;
+  margin-left: 3rem;
 }
 
 #home .content-all .home-text .btn-primary:hover{
@@ -229,12 +235,14 @@ p{
 }
 
 #about .content-about{
+  direction: rtl;
   padding: 3rem 0;
   display: grid;
   grid-template-columns:repeat(2,1fr) ;
   column-gap: 10rem;
   align-items: center;
 }
+
 
 #about .about-img{
   width: 100%;
@@ -247,24 +255,29 @@ p{
   color: var(--dark-gray);
   font-weight: 700;
   font-size: 25px;
+
 }
 
 
 #about .content-about .content-text hr{
-  width:18%;
+  width:15%;
   height: 3px;
   margin: 5px 0 15px;
   border-radius: 10px;
   background-color: var(--light-blue);
   font-weight: 700;
   border: none;
+  direction: rtl;
+  
+
 }
 
 #about .content-about .content-text p{
   color: var(--light-gray);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 17px;
   margin-bottom: 20px;
+  
 }
 
 #about .content-about .content-text .ul-all{
@@ -277,6 +290,9 @@ p{
   margin-bottom: 10px;
   font-weight: 500;
   color: var(--light-gray);
+    color: #000000;
+    font-weight: 600;
+
 }
 
 #about .content-about .content-text ul li i{
@@ -373,7 +389,8 @@ p{
 }
 #sick .row .item p{
   color: white;
-  font-weight: 500;
+  font-weight: 800;
+  
 }
 /* sick End */
 
@@ -440,7 +457,7 @@ padding: 6rem 0;
 
 #help .row .item p{
   color: var(--dark-gray);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 17px;
 }
 /* Help End */
@@ -829,6 +846,7 @@ padding: 6rem 0;
 #blogs .row .item{
   background-color: white;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
 }
 
 #blogs .row .item img{
@@ -946,10 +964,16 @@ padding: 6rem 0;
   padding: 15px;
   border: 1px solid #ccc;
   width: 100%;
-  font-weight:bold;
+  font-weight:800;
   color: var(--dark-gray);
 }
 
+#contact .row .controal select{
+  font-size: 15px;
+}
+#contact .row .controal select option{
+  font-size: 17px;
+}
 
 #contact .row .controal input:focus,
 #contact .row .controal select:focus,
@@ -1238,7 +1262,5 @@ padding: 6rem 0;
 
 
 /* The Media Start */
-@media (max-width:1300px){
-  
-}
+
 /* The Media End */
