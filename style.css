@@ -93,41 +93,41 @@ p{
   width: 100%;
   border-bottom: 1px solid rgba(42, 41, 41, 0.3);
   z-index: 3;
+}
 
+.con{
+  max-width: 1700px;
+  margin: auto;
 }
 
 #header .navbar{
-  max-width: 1200px;
-  margin: auto;
-  
-  
-}
-#header .navbar nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 100px;
   padding: 0 1rem;
+  direction: rtl;
   
 }
 
-
-#header .navbar nav .logo{
+.logo{
    width: 250px;
    transition: all 0.3s ease;
 }
 
-#header .navbar nav .logo:hover{
+#header .logo:hover{
   transform: scale(1.1);
 }
 
-#header .navbar nav ul{
+#header .navbar ul{
   display: flex;
-  font-family: "Oswald", serif
+  font-family: "Oswald", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
-#header .navbar nav ul li a{
+#header  .navbar  ul li a{
   margin: 0 15px;
   color: var(--dark-gray);
   font-weight: bold;
@@ -137,12 +137,33 @@ p{
 
 }
 
-#header .navbar nav ul li a:hover{
+#header .navbar ul li a:hover{
   color: white;
   background-color: var(--light-blue);
   border-radius: 15px;
   padding: 10px;
 }
+
+
+/* خاصين بالست بتاعت الرسبونسف */
+.header {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+
+.humburger i{
+  color: black;
+}
+
+.humburger {
+  display: none;
+}
+
+
 
 /* Header End */
 
@@ -518,7 +539,7 @@ padding: 6rem 0;
   font-size: 18px;
   border-radius: 10px;
   font-weight: 700;
-  padding: 13px 45px;
+  padding: 13px 30px;
   transition: all 0.4s ease;
 
 }
@@ -1302,3 +1323,117 @@ padding: 6rem 0;
 /* The Media Start */
 
 /* The Media End */
+
+
+
+
+
+
+
+
+
+/* media special Start */
+/* حاله خاصه  */
+@media (max-width: 1200px) {
+  .header {
+    padding: 0 3rem;
+    position: relative;
+    
+
+  }
+
+  .humburger {
+    display: block;
+    cursor: pointer;
+    font-size: 25px;
+    width: 45px;
+    height: 45px;
+    
+    position: relative;
+  }
+
+  .humburger i {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--light-blue);
+  }
+
+  .humburger i.active {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+
+  .navbar {
+    position: absolute;
+    background-color: #1C4D8D;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 20px 3rem; 
+    opacity: 0;
+    visibility: hidden; 
+    transition: 0.3s ease;
+    display: flex;    
+    flex-direction: column; 
+        /* width: 50%;
+    margin-left:47.7% ; */
+  }
+
+  .navbar.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar ul {
+    display: flex;   
+    flex-direction: column;
+    width: 100%;
+    align-items: center; 
+  }
+
+  .navbar ul li {
+       margin: 15px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    width: 100%;   
+    text-align: right; 
+  }
+
+  .navbar ul li:last-child {
+    border-bottom: none;
+  }
+
+
+#header .navbar ul li a {
+  padding-right: 30px;
+  transform: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#header .navbar ul li a:hover {
+  padding-right: 30px;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  transform: none;
+  background-color: transparent;
+
+
+}
+
+
+
+
+
+
+}
+/* media special End */

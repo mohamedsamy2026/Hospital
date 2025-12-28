@@ -54,14 +54,36 @@ function showSuccessMessage() {
         msg.classList.add('show'); 
     }, 100);
 
-    // 3. الاختفاء بعد 10 ثوانٍ (10000 ملي ثانية)
+    // 3. الاختفاء بعد 7 ثوانٍ
     setTimeout(() => {
         msg.classList.remove('show'); // بدء حركة الاختفاء
         
-        // حذف العنصر نهائياً من الصفحة بعد انتهاء الحركة (نصف ثانية إضافية)
+        // حذف العنصر نهائياً من الصفحة بعد انتهاء الحركة
         setTimeout(() => { 
             msg.remove(); 
         }, 500);
         
-    }, 7000); // يمكنك تغيير هذا الرقم (مثلاً 15000 لـ 15 ثانية)
+    }, 7000); 
 }
+
+// رسبونسف لست
+
+const navbar = document.querySelector(".navbar");
+const bars = document.querySelector(".fa-bars");
+const xmark = document.querySelector(".fa-xmark");
+const humburgerMenu = document.querySelector(".humburger");
+
+// وظيفة الضغط على أيقونة القائمة (فتح/إغلاق)
+humburgerMenu.addEventListener("click", () => {
+  bars.classList.toggle("active");
+  xmark.classList.toggle("active");
+  navbar.classList.toggle("active");
+});
+
+document.querySelectorAll(".navbar ul li a").forEach(link => {
+    link.addEventListener("click", () => {
+        navbar.classList.remove("active");
+        bars.classList.add("active");     
+        xmark.classList.remove("active");  
+    });
+});
