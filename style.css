@@ -271,7 +271,7 @@ p{
 
 #about .about-img{
   width: 100%;
-  height: 450px;
+  height: 500px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -285,7 +285,7 @@ p{
 
 
 #about .content-about .content-text hr{
-  width:15%;
+  width:85px;
   height: 3px;
   margin: 5px 0 15px;
   border-radius: 10px;
@@ -979,6 +979,7 @@ padding: 6rem 0;
    max-width: 100%;
    height: 600px;
    border-radius: 10px;
+   cursor: pointer;
 }
 
 #contact .row .controal{
@@ -1437,3 +1438,132 @@ padding: 6rem 0;
 
 }
 /* media special End */
+
+
+/* media Start */
+@media (max-width:1400px){
+  #home .content-all{
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+#home .content-all .home-text h1{
+  font-size: 60px;
+}
+#home .content-all .home-text p{
+  margin: 1rem auto;
+}
+
+#home .content-all img{
+  margin-bottom: 6rem;
+}
+
+#about .content-about{
+  grid-template-columns: 1fr;
+}
+#about .about-img{
+  margin-top: 3.5rem;
+}
+
+#about .content-about .content-text .ul-all{
+  margin-top: 3rem;
+}
+
+#services .row{
+  grid-template-columns: repeat(2,1fr);
+}
+#services .row .item{
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 3rem 25px;
+  border-radius: 15px;
+}
+
+#services .row .item p{
+  line-height: 1.6;
+}
+
+#services .row .item i{
+  margin-bottom: 20px;
+}
+#price-list .row{
+  grid-template-columns: repeat(2,1fr);
+  gap: 3rem;
+  column-gap: 0rem;
+}
+
+#price-list .row .col{
+  width: 80%;
+}
+#doctors .row{
+  grid-template-columns: repeat(2,1fr);
+  gap: 3rem;
+}
+#doctors .row .item{
+  width: 80%;
+  margin: auto;
+}
+
+#blogs .row{
+  grid-template-columns: 1fr;
+}
+
+#blogs .row .item{
+  width: 75%;
+  margin: auto;
+}
+#contact .row{
+  width: 80%;
+  margin: auto;
+  grid-template-columns: 1fr;
+}
+
+#contact .row form{
+  order: 2;
+}
+#contact .row img{
+  width: 70%;
+  order: 1;
+  margin: 3rem auto;
+}
+#new-letters .row{
+  grid-template-columns: 1fr;
+  width: 70%;
+  margin: auto;
+}
+
+#new-letters .row form{
+  width: 85%;
+  margin: auto;
+}
+
+#new-letters .row .content-text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+#footer .row{
+  grid-template-columns: repeat(2,1fr);
+  gap: 5rem;
+
+}
+#footer .row .col .soical ul{
+  margin-right: 5px;
+}
+
+#footer .row .col-4 form{
+  width: 75%;
+}
+
+
+@media (max-width:1000px){
+  
+}
+
+}
+
+/* media End */
