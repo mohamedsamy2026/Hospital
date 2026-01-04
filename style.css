@@ -1287,10 +1287,6 @@ padding: 6rem 0;
 /* Footer End */
 
 
-/* The Media Start */
-
-/* The Media End */
-
 
 
 
@@ -1627,6 +1623,29 @@ padding: 6rem 0;
   max-width: 400px;
   margin: auto;
  }
+
+ .success-popup {
+        /* جعل الرسالة في المنتصف تماماً */
+        right: 5% !important;
+        left: 5% !important;
+        width: 90% !important;
+        
+        /* إلغاء العرض الأدنى الكبير */
+        min-width: unset !important;
+        
+        /* تصغير الخط والبادينج ليناسب الموبايل */
+        font-size: 18px !important;
+        padding: 15px 20px !important;
+        min-height: 60px !important;
+        
+        /* تقليل المسافات الداخلية */
+        gap: 10px !important;
+    }
+
+    /* ضبط مكان النزول في الموبايل */
+    .success-popup.show {
+        top: 20px !important;
+    }
 }
 /* --- تم دمج وتنظيف ميديا 700px بواسطة Gemini --- */
 @media (max-width: 700px) {
@@ -1778,6 +1797,9 @@ margin: auto;
 #new-letters .row form button {
     width: 100%; /* الزرار يملأ العرض برضه عشان يبقى شكله أشيك في الموبايل */
 }
+
+
+
 
 
 }
