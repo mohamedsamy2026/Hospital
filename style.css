@@ -1725,7 +1725,9 @@ padding: 6rem 0;
   #sick .row{
     grid-template-columns: 1fr;
   }
-
+#call .content-call .btn-three{
+  margin-bottom: 1rem;
+}
   
 #sick .row .item {
         flex-direction: column; 
