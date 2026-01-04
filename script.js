@@ -3,18 +3,22 @@ document.querySelector('#contact form').addEventListener('submit', function(e) {
 
     const submitBtn = this.querySelector('button[type="submit"]');
     
+    // --- البيانات الجديدة ---
     const token = "8447345113:AAGn2QkiAYq_KGtiLifN255VhUuEuRuGUXM";
-    const chat_id = "-1003609645463"; 
+    const chat_id = "8391069477"; // تم التعديل لحسابك الشخصي بناءً على الصورة
+    // ----------------------
+    
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
     submitBtn.disabled = true;
     submitBtn.innerText = "جاري الإرسال...";
 
     const formData = new FormData(this);
-    let message = "<b>🏥 حجز موعد جديد</b>\n";
+    let message = "<b>🏥 حجز موعد جديد (خاص)</b>\n";
     message += "---------------------------------------\n";
     
     formData.forEach((value, key) => {
+        // تحسين شكل أسماء الحقول في الرسالة
         message += `<b>${key}:</b> ${value}\n`;
     });
 
@@ -29,11 +33,17 @@ document.querySelector('#contact form').addEventListener('submit', function(e) {
     })
     .then(response => {
         if (response.ok) {
-            showSuccessMessage(); // استدعاء رسالة النجاح المنسقة
+            showSuccessMessage(); 
             this.reset();
         } else {
-            alert("❌ حدث خطأ، تأكد من إعدادات البوت.");
+            // عشان تعرف لو فيه مشكلة ظهرت في الكونسول
+            console.error("Telegram Response Error");
+            alert("❌ حدث خطأ، تأكد من أنك بدأت المحادثة مع البوت (/start)");
         }
+    })
+    .catch(error => {
+        console.error("Fetch Error:", error);
+        alert("❌ فشل الاتصال بالسيرفر.");
     })
     .finally(() => {
         submitBtn.disabled = false;
@@ -41,39 +51,31 @@ document.querySelector('#contact form').addEventListener('submit', function(e) {
     });
 });
 
-// دالة إنشاء وإظهار رسالة النجاح برمجياً
+// دالة إظهار رسالة النجاح (بدون تغيير)
 function showSuccessMessage() {
-    // 1. إنشاء العنصر
     const msg = document.createElement('div');
     msg.className = 'success-popup';
     msg.innerHTML = '✅ تم إرسال بيانات الحجز بنجاح!';
     document.body.appendChild(msg);
 
-    // 2. إظهار العنصر (تأثير الدخول)
     setTimeout(() => { 
         msg.classList.add('show'); 
     }, 100);
 
-    // 3. الاختفاء بعد 7 ثوانٍ
     setTimeout(() => {
-        msg.classList.remove('show'); // بدء حركة الاختفاء
-        
-        // حذف العنصر نهائياً من الصفحة بعد انتهاء الحركة
+        msg.classList.remove('show'); 
         setTimeout(() => { 
             msg.remove(); 
         }, 500);
-        
     }, 7000); 
 }
 
-// رسبونسف لست
-
+// كود القائمة المستجيبة (بدون تغيير)
 const navbar = document.querySelector(".navbar");
 const bars = document.querySelector(".fa-bars");
 const xmark = document.querySelector(".fa-xmark");
 const humburgerMenu = document.querySelector(".humburger");
 
-// وظيفة الضغط على أيقونة القائمة (فتح/إغلاق)
 humburgerMenu.addEventListener("click", () => {
   bars.classList.toggle("active");
   xmark.classList.toggle("active");
